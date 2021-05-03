@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws LoginException, InterruptedException {
         JDA jda = JDABuilder
-                .createDefault("ODM4ODc1ODQ4MzY1OTY1MzUy.YJBeAw.PbpgVWGaG6EdUMjgQv-CHzr4jdo")
+                .createDefault("")
                 .addEventListeners(new Listener())
                 .build()
                 .awaitReady();
