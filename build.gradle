@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'me.nieuwdorp'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+    maven { url 'https://jitpack.io' }
+    maven {
+        url 'https://m2.dv8tion.net/releases'
+    }
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    implementation("net.dv8tion:JDA:4.2.1_253")
+    implementation 'com.google.cloud:google-cloud-speech:1.22.6'
+    implementation 'com.google.cloud:google-cloud-texttospeech:1.0.2'
+    implementation 'com.github.wdavies973:VocalCord:2.3'
+    implementation 'com.sedmelluq:lavaplayer:1.3.75'
+    implementation files('lib/FreeTTS/*')
+}
+
+test {
+    useJUnitPlatform()
+}
