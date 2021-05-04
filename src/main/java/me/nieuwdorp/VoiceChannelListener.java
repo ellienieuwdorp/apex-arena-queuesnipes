@@ -66,9 +66,7 @@ public class VoiceChannelListener extends ListenerAdapter {
     }
 
     private String constructCountdownFilepath(int number) {
-        String prefix = "src/main/resources/audio-numbers/";
-        String suffix = ".wav";
-        return prefix + number + suffix;
+        return this.getClass().getClassLoader().getResource(number + ".wav").getPath();
     }
 
     @Override
